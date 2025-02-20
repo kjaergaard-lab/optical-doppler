@@ -24,7 +24,7 @@ Electronic schematic of the controller is in [StepperServoConversion/ServoGrblBo
 
 ## Troubleshooting
 
-####Device does nothing at startup
+#### Device does nothing at startup
 
 - Confirm that Emergency Stop button is not depressed
 - Check that the power switch at the rear of the unit is turned on
@@ -37,7 +37,7 @@ If all of these are fine, open the lid of the device (WARNING: MAINS VOLTAGES IN
 - Check that the GRBL configuration is correct (request config by sending `$$`), especially the speed ($110). See [Config.md](Config.md) for more details.
 
  
-####The device perform a homing cycle (runs the stage into the limit switch) and then does nothing
+#### The device perform a homing cycle (runs the stage into the limit switch) and then does nothing
 
  - This implies that everything is powered, and that the arduino running GRBL is communicating effectively with the servo controller
  - If you can still hear the whine of the servo controller after homing, then GRBL still thinks it is moving the stage
@@ -48,12 +48,12 @@ If all of these are fine, open the lid of the device (WARNING: MAINS VOLTAGES IN
     - Connect a USB C cable to the arduino (CH340 USB-serial converter), and connect to the serial port with 115200 baud. The arduino should reset on connect, and one can note any errors that may be reported.
 
 
-####The speed of the stage isn't consistent / smooth
+#### The speed of the stage isn't consistent / smooth
 
  - Check the potentiometer connections and health. Consider replacing, and/or adding mor filtering.
 
  
-####The stage runs into the end
+#### The stage runs into the end
    *YOU SHOULD IMMEDIATELY HIT THE EMERGENCY STOP BUTTON IF THE DEVICE DOESN'T IMMEDIATELY STOP ITSELF* 
 
  - Manually move the stage off the limit switches (most easily by twisting the lead screw near the motor where there isn't any grease), and reset the controller while watching in case it happens again.
